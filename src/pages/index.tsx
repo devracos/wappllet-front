@@ -11,9 +11,9 @@ const index = () => {
 	
 	return (
 		<>
-			<div>Hola Finanzas.net {view===EView.TRANS? 'Transacciones':'Resumen'}</div>
+			{/* <h1 className='font'>Hola Finanzas.net {view===EView.TRANS? 'Transacciones':'Resumen'}</h1>
 			<button onClick={()=>setView(EView.TRANS)}>Transaction</button>
-			<button onClick={()=>setView(EView.SUMM)}>Resumen</button>
+			<button onClick={()=>setView(EView.SUMM)}>Resumen</button> */}
 		</>
 	)
 }
