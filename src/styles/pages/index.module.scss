@@ -1,0 +1,22 @@
+
+@import '../variables.scss', '../mixins.scss';
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+}
+
+.tag_style{
+	border: 5px solid $color-dark;
+	border-radius: $rounded;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	font-family: ;
+
+}
+
+.filter_list{
+	@include flex($justify:'flex-start');
+	
+}

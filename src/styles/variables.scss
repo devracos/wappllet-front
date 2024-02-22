@@ -19,10 +19,12 @@ $font-text-base: 1.6rem;
 $font-text-sm: 1.4rem;
 $font-text-mini: 1.2rem;
 
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
+$font-weight:(
+	"regular":400,
+	"medium":500,
+	"semibold":600,
+	"bold":700
+);
 
 /* Border Radius*/
 $rounded-sm: 0.125rem;

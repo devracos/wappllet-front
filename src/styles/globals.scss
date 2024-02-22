@@ -25,7 +25,9 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-color: var(--color--background);
-	color: var(--color--text);	
+	color: var(--color--text);
+	padding: 10px;
+
 }
 
 input {
@@ -45,4 +47,8 @@ a {
 }
 li {
 	list-style: none;
+}
+
+.p-style{
+	font-weight: map-get($font-weight,"bold");
 }

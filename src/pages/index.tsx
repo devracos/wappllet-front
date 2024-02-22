@@ -1,19 +1,16 @@
+import PageLayout from '@/components/templates/PageLayout'
+import TransaccionesLayout from '@/components/templates/TransaccionesLayout'
 import React,{useState} from 'react'
-
-enum EView{
-	TRANS,
-	SUMM,
-}
 
 const index = () => {
 
-	const [view	, setView] = useState(EView.TRANS)
+	const [page,setPage]=useState('transacciones')
 	
 	return (
 		<>
-			{/* <h1 className='font'>Hola Finanzas.net {view===EView.TRANS? 'Transacciones':'Resumen'}</h1>
-			<button onClick={()=>setView(EView.TRANS)}>Transaction</button>
-			<button onClick={()=>setView(EView.SUMM)}>Resumen</button> */}
+			<PageLayout>
+				{page == "transacciones" && <TransaccionesLayout />}
+			</PageLayout>	
 		</>
 	)
 }
