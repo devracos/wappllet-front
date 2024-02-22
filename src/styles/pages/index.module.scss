@@ -7,16 +7,18 @@
 }
 
 .tag_style{
-	border: 5px solid $color-dark;
+	border: 2px solid $color-dark;
 	border-radius: $rounded;
 	display: inline-block;
 	width: auto;
 	height: auto;
-	font-family: ;
-
+	font-size:18px;
+	padding: 0 10px;
 }
 
 .filter_list{
+	margin: 20px 0;
+	gap: 10px;
 	@include flex($justify:'flex-start');
 	
 }
