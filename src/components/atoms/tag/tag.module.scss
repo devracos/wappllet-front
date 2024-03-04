@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+
+
+.tag_color{
+	width: auto;
+	height: auto;
+	display: inline-block;
+	background-color: $color-purple;
+	font-family: var(--font-monserratAlt);
+}

@@ -1,0 +1,59 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.item_categoria{
+	font-size: 12px;
+	background-color: $color-green-30;
+	width: auto;
+	display: inline-block;
+	padding: 2px 5px;
+	margin-bottom: $space-4;
+	border-radius: $rounded;
+}
+
+.item_fecha{
+	font-size: 14px;
+}
+
+.item_list{
+
+	font-size: 18px ;
+	font-family: var(--font-comfortaa);
+	padding: $space-4;
+
+	@include flex($wrap:wrap,$align:center);
+
+	.item_list_1{		
+
+		flex: 0 0 auto;
+		@include flex();
+
+  }
+  .item_list_2{
+		flex: 1;
+		padding-left: $space-24;
+		font-weight: bold;
+		@include fromMax($medium){
+			flex: 0 0 auto;
+			padding-left: $space-12;
+		}
+	}
+
+  .item_list_3{
+		flex: 1; 
+		@include fromMax($medium){
+			padding-left: $space-12;
+		}
+	}
+  .item_list_4{
+    flex: 1; 
+		@include fromMax($medium){
+			display: none;
+		}
+  }
+
+	.item_list_5{
+    flex: 1;
+		@include flex($align:flex-end,$direction:column)
+  }
+	
+}

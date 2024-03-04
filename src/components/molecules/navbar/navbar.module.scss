@@ -1,0 +1,10 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.navbar{
+	margin-bottom: $space-24;
+	@include flex($justify:space-between);
+}
+
+.title_navbar{
+	font-family: var(--font-monserratAlt);
+}
