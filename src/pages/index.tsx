@@ -1,18 +1,12 @@
-import PageLayout from '@/components/templates/PageLayout'
-import ResumenLayout from '@/components/templates/ResumenLayout/ResumenLayout'
-import TransaccionesLayout from '@/components/templates/TransaccionesLayout'
-import React,{useState} from 'react'
+import { useRouter } from 'next/navigation'
+import { redirect } from 'next/navigation'
+import { useEffect } from 'react';
 
 const index = () => {
-
-	const [page,setPage]=useState('transacciones')
-	
-	return (
-		<PageLayout>
-			{page == "transacciones" && <TransaccionesLayout />}
-			{page == "resumen" && <ResumenLayout />}
-		</PageLayout>	
-	)
+	const router=useRouter();	
+	useEffect(() => {
+		router.push('/transacciones')
+	}, [])		
 }
 
 export default index

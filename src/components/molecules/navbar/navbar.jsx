@@ -1,18 +1,27 @@
-import React from 'react'
+import BurgerMenu from '@/components/atoms/burger-menu/burger-menu';
 import styles from './navbar.module.scss'
+import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import arrwosImg from '@/assets/images/arrows.png'
 
-import { RxHamburgerMenu } from "react-icons/rx";
+const Navbar = ({title}) => {
+	const router=useRouter();
 
-
-
-const Navbar = () => {
+	const redirectFn=()=>{
+		if(title==='resumen'){
+			return router.push('/transacciones')
+		}else{
+			return router.push('/resumen')
+		}		
+	}
 	return (
-		<>
-			<div className={styles.navbar}>
-						<h3 className={styles.title_navbar}>Dashboard </h3>							
-						<RxHamburgerMenu />
-			</div>
-		</>
+		<div className={styles.navbar}>
+			<div className={styles.test}>
+				<h3 className={styles.title_navbar} onClick={redirectFn}>{title}</h3>							
+				<Image src={arrwosImg} width={17} /> 
+			</div>			
+			<BurgerMenu />
+		</div>		
 	)
 }
 

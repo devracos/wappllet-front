@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app'
 import React from 'react'
-import PageLayout from '@/components/templates/PageLayout'
+import PageLayout from '@/components/templates/PageLayout/PageLayout'
 
 import {Montserrat_Alternates, Playpen_Sans, Comfortaa } from 'next/font/google';
 

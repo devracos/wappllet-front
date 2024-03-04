@@ -1,10 +1,13 @@
 import React from 'react'
 import styles from '@/styles/pages/index.module.scss'
+import PageLayout from '@/components/templates/PageLayout/PageLayout'
 
 
 const Transacciones = () => {
 	return (
-		<h1 className={styles.font}>Transacciones</h1>
+		<PageLayout page='transacciones'>
+			<p>Transacciones</p>
+		</PageLayout>
 	)
 }
 
