@@ -23,11 +23,11 @@
 }
 
 .button_left_edge,.button_left_front{
-	border-radius: 12px 0 0 12px;
+	border-radius: 12px 4px 4px 12px;
 }
 
 .button_right_edge,.button_right_front{
-	border-radius: 0 12px 12px 0;
+	border-radius: 4px 12px 12px 4px;
 } 
 
 .button_left_front,.button_right_front {
@@ -67,13 +67,13 @@
     cubic-bezier(.3, .7, .4, 1.5);
 }
 .button_pushable.push .button_left_front {
-	transform: translateY(-2px);
+	transform: translateY(-4px);
   transition: transform 34ms;
 	background-color: $color-dark;
 	color: $color-light;
 }
 .button_pushable.push .button_right_front {
-	transform: translateY(-2px);
+	transform: translateY(-4px);
   transition: transform 34ms;
 	background-color: $color-dark;
 	color: $color-light;

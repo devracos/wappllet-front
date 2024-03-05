@@ -4,6 +4,8 @@ import PageLayout from '@/components/templates/PageLayout/PageLayout'
 
 import {Montserrat_Alternates, Playpen_Sans, Comfortaa } from 'next/font/google';
 
+import '@/utils/c-util'
+
 import '../styles/globals.scss'
 
 const monserratAlt=Montserrat_Alternates({

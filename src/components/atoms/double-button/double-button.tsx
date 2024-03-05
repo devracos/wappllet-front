@@ -11,20 +11,19 @@ const DoubleButton = () => {
 
 	return (
 		<>
-		<button className={`${style.button_pushable} ${toggle? style.push:''}`} role="button" onClick={handleSwitch}>
-			<span className={`${style.button_left_edge}`}></span>
-			<span className={`${style.button_left_front} ${style.text}`}>
-				Gastos
-			</span>
-		</button>
-		<button className={`${style.button_pushable} ${!toggle? style.push:''}`} role="button" onClick={handleSwitch}>
-			<span className={`${style.button_right_edge}`}></span>
-			<span className={`${style.button_right_front} ${style.text}`}>
-				Ingresos
-			</span>
-		</button>
-		</>
-		
+			<button className={`${style.button_pushable} ${toggle? style.push:''}`} role="button" onClick={handleSwitch}>
+				<span className={`${style.button_left_edge}`}></span>
+				<span className={`${style.button_left_front} ${style.text}`}>
+					Gastos
+				</span>
+			</button>
+			<button className={`${style.button_pushable} ${!toggle? style.push:''}`} role="button" onClick={handleSwitch}>
+				<span className={`${style.button_right_edge}`}></span>
+				<span className={`${style.button_right_front} ${style.text}`}>
+					Ingresos
+				</span>
+			</button>
+		</>		
 	)
 }
 
