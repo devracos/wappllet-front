@@ -1,0 +1,88 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.button_pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+	width: 50%;
+  cursor: pointer;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button_left_edge, .button_right_edge  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+	border: 2px solid $color-dark;
+  background: $color-green-30;
+}
+
+.button_left_edge,.button_left_front{
+	border-radius: 12px 0 0 12px;
+}
+
+.button_right_edge,.button_right_front{
+	border-radius: 0 12px 12px 0;
+} 
+
+.button_left_front,.button_right_front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  font-size: 0.6rem;
+  color: $color-dark;
+	font-family: var(--font-comfortaa);
+  background:$color-light;
+	border: 2px solid $color-dark;
+  will-change: transform;
+  transform: translateY(-8px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button_left_front, .button_right_edge  {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button_pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button_pushable:hover .button_left_front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+.button_pushable.push .button_left_front {
+	transform: translateY(-2px);
+  transition: transform 34ms;
+	background-color: $color-dark;
+	color: $color-light;
+}
+.button_pushable.push .button_right_front {
+	transform: translateY(-2px);
+  transition: transform 34ms;
+	background-color: $color-dark;
+	color: $color-light;
+}
+// .button_left_pushable:active .button_left_front {
+//   transform: translateY(-2px);
+//   transition: transform 34ms;
+// }
+
+.button_pushable:focus:not(:focus-visible) {
+  outline: none;
+}

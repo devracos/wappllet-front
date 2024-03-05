@@ -18,7 +18,7 @@ const Navbar = ({title}) => {
 		<div className={styles.navbar}>
 			<div className={styles.test}>
 				<h3 className={styles.title_navbar} onClick={redirectFn}>{title}</h3>							
-				<Image src={arrwosImg} width={17} /> 
+				<Image src={arrwosImg} width={17} alt='arrowIcons'/> 
 			</div>			
 			<BurgerMenu />
 		</div>		
