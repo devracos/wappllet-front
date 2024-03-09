@@ -2,7 +2,7 @@ import React from 'react'
 import FilterTag from '../atoms/filter-tag'
 import styles from '@/styles/pages/index.module.scss';
 import SearchInput from '../atoms/search-input';
-import ItemsList from '../organisms/items-list';
+import ItemsList from '../organisms/items-lsit.tsx/items-list';
 import Button from '../atoms/buttons/button';
 
 const categories=['Todos','Personales','Comida','Otros']

@@ -3,25 +3,30 @@ import styles from './navbar.module.scss'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import arrwosImg from '@/assets/images/arrows.png'
+import { resumenW, transaccionesW } from '@/constants/local-text';
+import DoubleArrow from '@/assets/svg/double-arrow';
+import { color_dark, color_white } from '@/constants/color';
 
 const Navbar = ({title}) => {
 	const router=useRouter();
-
+	const isResumen=title===resumenW;
 	const redirectFn=()=>{
-		if(title==='resumen'){
-			return router.push('/transacciones')
+		if(isResumen){
+			return router.push('/'+transaccionesW)
 		}else{
-			return router.push('/resumen')
+			return router.push('/'+resumenW)
 		}		
 	}
 	return (
 		<div className={styles.navbar}>
-			<div className={styles.test}>
-				<h3 className={styles.title_navbar} onClick={redirectFn}>{title}</h3>							
-				<Image src={arrwosImg} width={17} alt='arrowIcons'/> 
-			</div>			
+			<div>
+				<h3 className={styles.navbar_title} onClick={redirectFn}>{title}</h3>							
+				<div>
+					<DoubleArrow color={ isResumen ? color_white : color_dark} />
+				</div>
+			</div>
 			<BurgerMenu />
-		</div>		
+		</div>	
 	)
 }
 

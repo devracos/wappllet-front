@@ -15,7 +15,7 @@
 }
 
 .border_box{
-	border: 2px solid $color-dark;
+	border: 1px solid $color-dark;
 	border-radius: $rounded;
 }
 
@@ -48,30 +48,7 @@
 
 .filter_list{
 	gap: 10px;
-	@include flex($justify:flex-start);
-
-	
-}
-
-
-.search_style{
-	width: 100%;
-	height: 31px;
-	font-size: 18px;
-	display: flex;
-	align-items: center;
-	padding-left: 5px;
-	margin-top: $space-8;
-
-	svg{
-		margin-right: 5px;
-		opacity: 0.4;
-	}
-
-	input{
-		font-family: var(--font-comfortaa);
-	}
-
+	@include flex($justify:flex-start);	
 }
 
 

@@ -8,7 +8,7 @@ const BurgerMenu = () => {
 		setToggle(prev=>!prev)
 	}
 	return (
-		// <div className={`${style.burgerIcon} ${toggle? style.open : ''}`} onClick={handleToggle}>
+		
 		<div className={[
 				style.burgerIcon,
 				toggle && style.open].c()

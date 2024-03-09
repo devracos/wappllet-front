@@ -3,15 +3,14 @@
 .navbar{
 	margin-bottom: $space-24;
 	@include flex($justify:space-between);
-	> div:first-child{
-		
-		@include flex($direction:row);
+	> div:first-child{		
+		@include flex($direction:row, $justify:center, $align:center);
+	}
+	&_title{
+		font-family: var(--font-monserratAlt);
+		text-transform: capitalize;
+		cursor: pointer;
+		margin-right: 10px;
 	}
 }
 
-.title_navbar{
-	font-family: var(--font-monserratAlt);
-	text-transform: capitalize;
-	cursor: pointer;
-	margin-right: 10px;
-}

@@ -2,4 +2,8 @@
 
 .page_layout{
 	padding: $space-24;
+	&_bgColor{
+		background-color: $color-light-purple;
+		color: $color-light;
+	}
 }

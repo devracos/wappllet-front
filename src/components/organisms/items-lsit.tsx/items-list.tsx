@@ -1,5 +1,6 @@
-import React from 'react'
-import ItemList from '../molecules/item-list/item-list'
+import React, { useEffect } from 'react'
+import ItemList from '../../molecules/item-list/item-list'
+import { useWapplletStore } from '@/store/userStore'
 
 const TestList=[
 	{
@@ -40,10 +41,13 @@ const TestList=[
 	},
 ]
 
-const ItemsList = () => (
-	TestList.map((item)=>(
-			<ItemList key={item.id} {...item} />
-		))	
+const ItemsList = () => {
+	const incomeList=useWapplletStore(state=>state.incomes)
+	return (
+		incomeList.map((item)=>(
+				<ItemList key={item.id} {...item} />
+			))	
 	)
+}
 
 export default ItemsList

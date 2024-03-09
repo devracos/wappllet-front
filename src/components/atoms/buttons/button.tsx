@@ -8,7 +8,7 @@ const Button = ({text,color}) => {
 		<div>
 			<button className={`${styles.btn_style} ${styles.btn_purple}`} type='button'>
 				{/* <span className={styles.btn_border}></span> */}
-				<span className=''>{text}</span>				
+				<span className=''>{text}</span>
 			</button>			
 		</div>
 	)

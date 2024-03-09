@@ -6,15 +6,15 @@
 }
 
 .sidebar{
-	display: block;
-	left: 0;
-	width: 300px;
+	position: absolute;
+
+	top: 0;
+	right: -100%;
+	width: 100vw;
 	height: 100vh;
 	background-color: $color-dark;
 	@include flex($justify:flex-start,$direction:column);
-	@include fromMax($medium){
-		display: none;
-	}
+
 
 }
 
