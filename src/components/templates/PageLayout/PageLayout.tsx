@@ -10,7 +10,7 @@ const PageLayout = ({children,page,toggleTitles}:{children:React.ReactNode,page:
 
 	return (
 		<div className={[styles.page_layout, page===resumenW && styles.page_layout_bgColor].c()}>
-			{/* <SidebarMenu /> */}
+			{/* <SidebarMenu /> Este es para felipe ♥ */}
 			<Navbar title={page} />
 			<DoubleButton titles={toggleTitles} />
 			{children}
