@@ -1,0 +1,42 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.logo_sidebar{
+	width: 150px;
+	margin: 75px auto;
+}
+
+.sidebar{
+	position: absolute;
+
+	top: 0;
+	right: -100%;
+	width: 100vw;
+	height: 100vh;
+	background-color: $color-dark;
+	@include flex($justify:flex-start,$direction:column);
+
+
+}
+
+.ul_style{
+	color: $color-light;	
+	display: flex;
+  width: 100%;
+  padding-left: 30px; 
+	font-family: var(--font-monserratAlt);
+	font-size: 18px;
+	li{
+		margin: 8px 0;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		opacity: 0.8;
+
+		&:hover{
+			padding-left: 10px;
+			opacity: 1;
+		}
+	}
+
+	@include flex($align:flex-start,$direction:column);	
+
+}

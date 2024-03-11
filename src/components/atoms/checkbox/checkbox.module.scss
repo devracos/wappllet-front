@@ -1,0 +1,24 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.input_style{
+	input{
+		appearance: none;
+		width: 18px;
+		height: 18px;
+		-webkit-appearance: none;
+		cursor: pointer;
+
+		&::after{
+			content: '';
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			background-image: url('../../../assets/images/NotChecked.png');
+			background-size: contain;
+		}
+		&:checked::after{
+			background-image: url('../../../assets/images/Checked.png');
+		}
+
+	}
+}

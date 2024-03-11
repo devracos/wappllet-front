@@ -1,0 +1,43 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.item_list{
+
+	font-size: 18px ;
+	font-family: var(--font-comfortaa);
+	padding: $space-8;
+	background-color: $color-light;
+
+	@include flex($wrap:wrap,$align:center);
+
+	&_emoji{
+
+		border-radius: 4px;
+		padding: $space-4;
+
+		flex: 0 0 auto;
+		@include flex();
+	}
+
+	&_description{
+		font-weight: bold;
+	}
+
+	&_description_date{
+		flex: 1;
+		padding-left: $space-8;
+	}
+
+	&_value{
+		flex: 0 0 auto;
+		font-size: 24px;
+		font-weight: bold;
+		font-family: var(--font-monserratAlt);
+		padding-right: $space-8;
+	}
+
+	&_date{
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+}

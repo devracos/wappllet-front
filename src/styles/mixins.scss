@@ -1,0 +1,20 @@
+/* Función para media queries */
+@mixin fromMin($size) {
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin fromMax($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align;
+}

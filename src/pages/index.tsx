@@ -1,9 +1,13 @@
-import React from 'react'
+import { transaccionesW } from '@/constants/local-text';
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react';
+
 
 const index = () => {
-	return (
-		<div>Hola Mundo</div>
-	)
+	const router=useRouter();	
+	useEffect(() => {
+		router.push('/'+transaccionesW)
+	}, [])
 }
 
 export default index
