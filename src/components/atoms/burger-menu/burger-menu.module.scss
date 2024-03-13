@@ -4,6 +4,7 @@
   width: 25px;
   height: 37px;
   position: relative;
+	z-index: 2;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -59,6 +60,7 @@
   top: 18px;
   width: 0%;
   left: 50%;
+	background-color: $color-light;
 	outline: none;
 	&:focus {
     outline: none;
@@ -73,6 +75,7 @@
 	width: 25px;
 	top: 18px;
 	outline: none;
+	background-color: $color-light;
 	&:focus {
     outline: none; 
   }
@@ -84,6 +87,7 @@
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 	top: 18px;
+	background-color: $color-light;
 	width: 25px;
 	&:focus {
     outline: none;

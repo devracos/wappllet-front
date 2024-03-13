@@ -7,7 +7,8 @@ import { resumenW, transaccionesW } from '@/constants/local-text';
 import DoubleArrow from '@/assets/svg/double-arrow';
 import { color_dark, color_white } from '@/constants/color';
 
-const Navbar = ({title}) => {
+const Navbar = ({title,setToggleMenu,toggleMenu}) => {
+	
 	const router=useRouter();
 	const isResumen=title===resumenW;
 	const redirectFn=()=>{
@@ -25,7 +26,7 @@ const Navbar = ({title}) => {
 					<DoubleArrow color={ isResumen ? color_white : color_dark} />
 				</div>
 			</div>
-			<BurgerMenu />
+			<BurgerMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
 		</div>	
 	)
 }

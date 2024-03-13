@@ -2,16 +2,17 @@ import React, { useState } from 'react'
 import style from './burger-menu.module.scss'
 
 
-const BurgerMenu = () => {
-	const [toggle, setToggle] = useState(false)
-	const handleToggle=()=>{
-		setToggle(prev=>!prev)
+const BurgerMenu = ({setToggleMenu,toggleMenu}:{setToggleMenu:Function,toggleMenu:boolean}) => {
+	
+	const handleToggle=()=>{		
+		setToggleMenu((prev:boolean)=>!prev)
 	}
+	
 	return (
 		
 		<div className={[
 				style.burgerIcon,
-				toggle && style.open].c()
+				toggleMenu && style.open].c()
 			} onClick={handleToggle}>
 			<span></span>
 			<span></span>
