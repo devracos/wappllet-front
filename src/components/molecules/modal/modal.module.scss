@@ -1,0 +1,85 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.overlay{
+	background-color: rgba($color: $color-purple, $alpha: 0.4);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+
+	@include flex();
+}
+
+.modal_container{
+	width: 100%;
+	height: 50%;
+	background-color: $color-light;	
+	border-radius: 25px 25px 0 0;
+	align-self: flex-end;
+	padding: $space-24;	
+	border: 2px solid $color-dark;
+	@include flex($direction:column,$justify:flex-start);
+
+	.close_icon{
+		align-self: flex-end;
+	}
+
+	&_form{
+		width: 100%;
+		
+		@include flex($wrap:wrap,$justify:initial,$align:initial);
+	}
+
+	&_title{
+		font-family: var(--font-monserratAlt);
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	&_input{		
+		font-size: 18px;
+		font-weight: bold;
+		font-family: var(--font-monserratAlt);
+		flex: 0 0 50%;		
+		
+		span{
+			color: red;			
+		}
+		
+		input{
+			width: 90%;
+			background-color: $color-gray-light;
+			font-family: var(--font-monserratAlt);
+			padding-left: 10px;
+			border-radius: $rounded;
+			margin: 10px 0;
+			height: 30px;
+		}
+	}
+
+	&_textarea{
+		font-size: 18px;
+		font-weight: bold;
+		font-family: var(--font-monserratAlt);
+		flex-grow: 1;
+
+		textarea{
+			width: 95%;
+			resize: none;
+			min-height:50px;
+			background-color: $color-gray-light;
+			font-family: var(--font-monserratAlt);
+			padding: 3px 0 0 10px;
+			border: none;
+			border-radius: $rounded;
+			margin: 10px 0;
+		}
+	}
+
+	&_buttons{
+		width: 100%;
+		margin-top: 20px;
+		@include flex($justify:space-between)
+
+	}
+}

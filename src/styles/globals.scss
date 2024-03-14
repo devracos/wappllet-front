@@ -28,6 +28,10 @@ body {
 	color: var(--color--text);
 }
 
+#__next{
+	height: 100%;
+}
+
 input {
 	border-style: none;
 	background: transparent;
@@ -49,4 +53,8 @@ li {
 
 .p-style{
 	font-weight: map-get($font-weight,"bold");
+}
+
+.height100{
+	height: 100%;
 }

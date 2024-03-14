@@ -29,7 +29,7 @@ const comfortaa=Comfortaa({
 
 const App = ({Component}:AppProps) => {
 	return (
-		<div className={`${monserratAlt.variable} ${playpenSans.variable} ${comfortaa.variable}`} >
+		<div className={`${monserratAlt.variable} ${playpenSans.variable} ${comfortaa.variable} height100`} >
 			<Component />
 		</div>
 	)
