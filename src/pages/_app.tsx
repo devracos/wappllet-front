@@ -8,6 +8,8 @@ import '@/utils/c-util'
 
 import '../styles/globals.scss'
 
+
+
 const monserratAlt=Montserrat_Alternates({
 	weight:['500','600','700'],
 	style:['normal'],
@@ -29,7 +31,7 @@ const comfortaa=Comfortaa({
 
 const App = ({Component}:AppProps) => {
 	return (
-		<div className={`${monserratAlt.variable} ${playpenSans.variable} ${comfortaa.variable}`} >
+		<div className={`${monserratAlt.variable} ${playpenSans.variable} ${comfortaa.variable} height100`} >
 			<Component />
 		</div>
 	)

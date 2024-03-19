@@ -28,6 +28,10 @@ body {
 	color: var(--color--text);
 }
 
+#__next{
+	height: 100%;
+}
+
 input {
 	border-style: none;
 	background: transparent;
@@ -49,4 +53,101 @@ li {
 
 .p-style{
 	font-weight: map-get($font-weight,"bold");
+}
+
+.height100{
+	height: 100%;
+}
+
+/*Fonts Mobile*/
+
+.h1{
+	font-size: 30px;
+	font-weight: 600;
+	font-family: var(--font-monserratAlt);
+
+	@include fromMin($x-large){
+		font-size: 36px;
+	}
+}
+
+.h2{
+	font-size: 24px;
+	font-weight: 600;
+	font-family: var(--font-monserratAlt);
+
+	@include fromMin($x-large){
+		font-size: 30px;
+	}
+}
+
+.h3{
+	font-size: 20px;
+	font-weight: 600;
+	font-family: var(--font-monserratAlt);
+
+	@include fromMin($x-large){
+		font-size: 24px;
+	}
+}
+
+
+.hl1{
+	font-size: 24px;
+	font-weight:900;
+	font-family: var(--font-monserratAlt);
+
+	@include fromMin($x-large){
+		font-size: 30px;
+	}
+}
+
+.hl2{
+	font-size: 18px;
+	font-weight:700;
+	font-family: var(--font-monserratAlt);
+
+	@include fromMin($x-large){
+		font-size: 24px;
+	}
+}
+
+.hl3{
+	font-size: 16px;
+	font-weight:700;
+	font-family: var(--font-monserratAlt);
+
+	@include fromMin($x-large){
+		font-size: 18px;
+	}
+}
+
+.t1{
+	font-family: 12px;
+	font-weight:700;
+	font-family: var(--font-comfortaa);
+
+	@include fromMin($x-large){
+		font-size: 14px;
+	}
+}
+
+.t2{
+	font-family: 16px;
+	font-weight: 600;
+	font-family: var(--font-comfortaa);
+
+	@include fromMin($x-large){
+		font-size: 18px;
+	}
+}
+
+.t3{
+	font-size: 16px;
+	font-weight:500;
+	font-family: var(--font-monserratAlt);
+
+	@include fromMin($x-large){
+		font-size: 18px;
+	}
 }

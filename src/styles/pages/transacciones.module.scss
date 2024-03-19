@@ -1,5 +1,39 @@
 @import '@/styles/variables.scss', '@/styles/mixins.scss' ;
 
-.content_transacciones{
-	@include flex($direction:column,$align:initial,$justify:initial)
+.content_transacciones{	
+	
+	flex-grow: 1;
+	@include flex($direction:column,$align:initial,$justify:space-between)
 }
+.content_footer{
+	align-self: flex-end;
+	width: 100%;
+
+	&_summary{
+		text-align: end;
+	
+		p{
+			font-size: 16px;
+			font-family: var(--font-monserratAlt);
+			font-weight: bold;
+			span{
+				color: $color-green-90;
+			}
+		}
+	}
+
+	&_buttons{
+		height: auto;		
+		padding-top: 10px;
+		width: 100%;
+		@include flex($justify:space-between)
+	}
+}
+
+.wrapper{
+	height: 100%;
+	
+	@include flex($align:space-between)
+
+}
+

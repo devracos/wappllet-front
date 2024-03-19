@@ -1,0 +1,63 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.button_pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+	width: auto;
+  cursor: pointer;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button_edge  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+	border: 1px solid $color-dark;
+  background: $color-gray;
+	border-radius: $rounded;
+}
+
+.button_front{
+  display: block;
+  position: relative;
+	padding: 3px 10px;
+	border-radius: $rounded;
+  color: $color-dark;
+	font-weight: bold;
+	font-family: var(--font-monserratAlt);
+  background:$color-green-60;
+	border: 1px solid $color-dark;
+  will-change: transform;
+  transform: translateY(-6px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+
+.button_pushable:hover .button_front {
+	background-color: $color-dark;
+	color: $color-light;
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+.button_pushable.push .button_front {
+	transform: translateY(-2px);
+  transition: transform 34ms;
+	background-color: $color-dark;
+	color: $color-light;
+}
+
+.button_pushable:focus:not(:focus-visible) {
+  outline: none;
+}

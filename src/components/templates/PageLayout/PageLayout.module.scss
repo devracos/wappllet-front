@@ -2,8 +2,17 @@
 
 .page_layout{
 	padding: $space-24;
+	height: 100%;
+	
 	&_bgColor{
 		background-color: $color-light-purple;
 		color: $color-light;
+	
 	}
+}
+
+.wrapper{
+	height: 100%;
+
+	@include flex($align:initial,$justify:initial,$direction:column)
 }

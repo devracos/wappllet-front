@@ -14,14 +14,18 @@ interface IIncome {
 	price:number
 }
 
-interface IIncomeState {
-  incomes: IIncome[]
+interface DataState {
+  data: {
+		incomes:IIncome[],
+		bills:IIncome[],
+	}
 }
 
-const wapplletSlice: StateCreator<IIncomeState, [["zustand/persist", unknown]]> = (
+const wapplletSlice: StateCreator<DataState, [["zustand/persist", unknown]]> = (
   set
 ) => ({
-  incomes: [{
+  data: {
+		incomes:[{
 		id:1,
 		date:'03/12/2023',
 		check:false,
@@ -45,12 +49,24 @@ const wapplletSlice: StateCreator<IIncomeState, [["zustand/persist", unknown]]> 
 		frecuency:'Mensual',
 		category:'cine',
 		price:28000
-	}]
+	}],
+		bills:[{
+			id:84,
+			date:'03/12/2023',
+			check:false,
+			description:'Smarfit',
+			frecuency:'Mensual',
+			category:'cine',
+			price:78000
+		}]
+	}
 });
 
-export const useWapplletStore = create<IIncomeState>()(
+export const useWapplletStore = create<DataState>()(
   persist(wapplletSlice, {
     name: "wappllet-storage",
     storage: createJSONStorage(() => secureLocalStorage as StateStorage),
   })
 )
+
+//Revisar Slice Tools
