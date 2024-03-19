@@ -1,47 +1,102 @@
 @import '@/styles/variables.scss', '@/styles/mixins.scss' ;
 
-.logo_sidebar{
-	width: 150px;
-	margin: 75px auto;
-}
-
 .sidebar{
 	position: fixed;
 	z-index: 1;
-
 	top: 0;
 	right: -100%;
 	width: 100vw;
 	height: 100vh;
-	background-color: $color-dark;
+	background-color: $color-green-90;
 	transition: all 0.3s ease-in-out;
+	padding: 24px;
 
-	@include flex($justify:flex-start,$direction:column);
+
+	@include flex($justify:space-between,$direction:column);
 
 	&.active{
 		right: 0;
 	}
 }
-
-.ul_style{
-	color: $color-light;	
+.bill1{
+	position: absolute;
+	bottom: 10px;
+	right: -38px;
+	width: 70px;
+	height: 80px;
+}
+.bill2{
+	position: absolute;
+	bottom: 10px;
+	left: -38px;
+	width: 70px;
+	height: 80px;
+}
+.bill3{
+	position: absolute;
+	bottom: 10px;
+	right: -38px;
+	width: 70px;
+	height: 80px;
+}
+.header{
+	width: 100%;
 	display: flex;
-  width: 100%;
-  padding-left: 30px; 
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.logo_sidebar{
+	width: 100px;
+}
+
+.main{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pp{
+	width: 120px;
+	height: 120px;
+}
+
+.h1{
+	font-size: 24px;
+}
+
+.h2{
+	color: $color-light;	
+  	width: 100%;
 	font-family: var(--font-monserratAlt);
-	font-size: 18px;
-	li{
-		margin: 8px 0;
-		cursor: pointer;
-		transition: all 0.3s ease-in-out;
-		opacity: 0.8;
+	font-size: 20px;
+	text-align: center;
+	margin: 10px 0;
+}
 
-		&:hover{
-			padding-left: 10px;
-			opacity: 1;
-		}
-	}
+.p{
+	color: $color-light;	
+  	width: 100%;
+	font-family: var(--font-monserratAlt);
+	font-size: 16px;
+	text-align: left;
+	margin: 10px auto 140px;
+}
 
-	@include flex($align:flex-start,$direction:column);	
+.social{
+	display: flex;
+	font-family: var(--font-monserratAlt);
+	font-size: 10px;
+	margin-top: 80px;
+}
 
+.a{
+	color: $color-dark;
+	margin: 0 5px;
+}
+
+.version{
+	color: $color-light;
+	margin: 0 5px;
 }
