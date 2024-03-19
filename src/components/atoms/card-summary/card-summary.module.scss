@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.container_card_summary{
+	width: 100%;	
+	height: 150px;
+	background-color: $color-light;
+	border-radius: $rounded-xl;
+	border: 2px dashed $color-dark;
+
+
+}

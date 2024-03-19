@@ -1,3 +1,4 @@
+import Summary from '@/components/molecules/summary/summary'
 import PageLayout from '@/components/templates/PageLayout/PageLayout'
 import { resumenW } from '@/constants/local-text'
 import { useState } from 'react'
@@ -8,7 +9,9 @@ const resumen = () => {
 	const [dataContent, setDataContent] = useState(true)
 	return (
 		<PageLayout page={resumenW} toggleTitles={toggleTitles} dataContent={dataContent} setDataContent={setDataContent}>
-			<p>Resumen</p>
+			<div>
+				<Summary />
+			</div>
 		</PageLayout>
 	)
 }

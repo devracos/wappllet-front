@@ -7,13 +7,13 @@ import { resumenW } from '@/constants/local-text';
 import SidebarMenu from '@/components/molecules/sidebar/sidebar-menu';
 import Modal from '@/components/molecules/modal/modal';
 
-const PageLayout = ({children,page,toggleTitles,dataContent,setDataContent,modal,toggleModal}:{children:React.ReactNode,page:string,toggleTitles:[string,string],dataContent:boolean,setDataContent:Function,modal:boolean,toggleModal:Function}) => {
+const PageLayout = ({children,page,toggleTitles,dataContent,setDataContent,modal,toggleModal}:{children:React.ReactNode,page:string,toggleTitles:[string,string],dataContent:boolean,setDataContent:any,modal?:boolean,toggleModal?:()=>void}) => {
 	
 	const [toggleMenu, setToggleMenu] = useState(false)
 
 	return (
 		<>
-			<Modal state={modal} toggleModal={toggleModal} />
+			{(modal && toggleModal) && <Modal state={modal} toggleModal={toggleModal} />}
 
 			<SidebarMenu toggleMenu={toggleMenu}/> 
 			<div className={[styles.page_layout, page===resumenW && styles.page_layout_bgColor].c()}>
