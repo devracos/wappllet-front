@@ -9,7 +9,7 @@
 	height: 100vh;
 	background-color: $color-green-90;
 	transition: all 0.3s ease-in-out;
-	padding: 24px;
+	padding: 35px 44px;
 	overflow: hidden;
 
 	@include flex($justify:space-between,$direction:column);
@@ -20,30 +20,39 @@
 }
 .bill1{
 	position: absolute;
-	bottom: 10px;
-	right: -38px;
-	width: 70px;
-	height: 80px;
+	bottom: 20px;
+	right: -25px;
+	width: 73px;
+	height: 78px;
 }
 .bill2{
 	position: absolute;
-	bottom: 10px;
-	left: -38px;
-	width: 70px;
-	height: 80px;
+	bottom: -40px;
+	left: -40px;
+	width: 110px;
+	height: 87px;
+	transform: rotate(-45deg);
 }
 .bill3{
 	position: absolute;
-	bottom: 10px;
-	right: -38px;
-	width: 70px;
-	height: 80px;
+	top: 100px;
+	right: -80px;
+	width: 228px;
+	height: 210px;
+}
+.bill4{
+	position: absolute;
+	bottom: 287px;
+	left: 77px;
+	width: 80px;
+	height: 100px;
+	z-index: 2;
 }
 .header{
 	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+
+	@include flex($align: flex-start, $justify: flex-start);
+	
 }
 
 .logo_sidebar{
@@ -51,26 +60,31 @@
 }
 
 .main{
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 20px;
 }
 
 .pp{
-	width: 120px;
-	height: 120px;
+	width: 124px;
+	height: 124px;
+	margin-bottom: 10px;
 }
 
-.h1{
+.title{
 	font-size: 24px;
+	font-family: var(--font-monserratAlt);
+	font-weight: 900;
+	color: $color-light;
 }
 
 .h2{
 	color: $color-light;	
   	width: 100%;
 	font-family: var(--font-monserratAlt);
-	font-size: 20px;
+	font-weight: 700;
+	font-size: 24px;
 	text-align: center;
 	margin: 10px 0;
 }
@@ -78,7 +92,8 @@
 .p{
 	color: $color-light;	
   	width: 100%;
-	font-family: var(--font-monserratAlt);
+	font-family: var(--font-comfortaa);
+	font-weight: 500;
 	font-size: 16px;
 	text-align: left;
 	margin: 10px auto 140px;
@@ -87,8 +102,10 @@
 .social{
 	display: flex;
 	font-family: var(--font-monserratAlt);
-	font-size: 10px;
+	font-weight: 500;
+	font-size: 12px;
 	margin-top: 80px;
+	gap: 10px;
 }
 
 .a{
