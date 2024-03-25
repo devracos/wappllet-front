@@ -19,7 +19,7 @@ const SidebarMenu = ({toggleMenu}:{toggleMenu:boolean}) => {
 				<h2 className={styles.h2}>Hola, bienvenido</h2>
 				<p className={styles.p}>Accede o regístrate aquí para asegurar la sincronización de tu información en múltiples dispositivos y mantener tus datos siempre disponibles.</p>
 				<Image className={styles.bill4} src={bills_4} alt="Bills 4" width={200}/>
-				<SingleButton text="Iniciar Sesión" type="normal" onClick={() => {return;}}/>				  
+				<SingleButton text="Iniciar Sesión" type="normal" onClick={() => {return;}} borderColor='green'/>				  
 			</div>
 			<div className={styles.footer}>
 				<div className={styles.social}>

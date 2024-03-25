@@ -9,6 +9,7 @@
 .btn_normal{
 	background-color: $color-light;
 }
+
 .button_pushable {
   position: relative;
   border: none;
@@ -28,14 +29,21 @@
   width: 100%;
   height: 100%;  
 	border: 1px solid $color-dark;
-  background: $color-gray;
 	border-radius: $rounded;
 }
-
+.btn_border_green{
+  background: $color-green-30;
+}
+.btn_border_purple{
+  background: $color-light-purple;
+}
+.btn_border_grey{
+  background: $color-gray;
+}
 .button_front{
   display: block;
   position: relative;
-  padding: 5px 25px;
+  padding: 10px 25px;
   font-size: 0.6rem;	
 	border-radius: $rounded;
   color: $color-dark;

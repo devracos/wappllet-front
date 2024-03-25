@@ -23,7 +23,7 @@ const Navbar = ({title,setToggleMenu,toggleMenu}) => {
 			<div>
 				<h3 className={styles.navbar_title} onClick={redirectFn}>{title}</h3>							
 				<div>
-					<DoubleArrow color={ isResumen ? color_white : color_dark} />
+					<DoubleArrow color={color_dark} />
 				</div>
 			</div>
 			<BurgerMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />

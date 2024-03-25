@@ -1,0 +1,21 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.placeholder{
+    height: 45px;
+    border-radius: $rounded;
+    border: 2px solid $color-dark;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.placeholder_purple{
+    width: 200px;
+    background-color: $color-light-purple;
+    color: $color-light;
+}
+
+.placeholder_green{
+    width: 350px;
+    background-color: $color-green-60;
+    color: $color-dark;
+}

@@ -4,9 +4,9 @@
 	@include flex($direction:column,$justify:initial,$align:initial);
 }
 
-.container_summary{	
-	margin: 20PX 0;	
-	@include flex($justify:initial,$align:center);
+.savings{	
+	margin: 20px 0;	
+	@include flex($justify:center,$align:center);
 	p{
 		flex: 1;
 		span{
@@ -19,7 +19,22 @@
 		text-align:right;
 		line-height: 25px;
 		height: 27px;		
-		
+		color: $color-light;
 		border-radius: $rounded;
 	}
+}
+
+.divider{
+	border: none;
+	border-top: 2px dashed $color-dark;
+	width: 100%;
+	margin: 15px 0;
+}
+
+.balance{
+	margin-top: 30px;
+}
+
+.balance_amount{
+	font-weight: 700;
 }
