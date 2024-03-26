@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss', '@/styles/mixins.scss' ;
+
+.placeholder{
+    @include flex($direction:column,$justify:center,$align:center);
+    height: 100px;
+    width: 90px;
+    border-radius: $rounded-xl;
+    border: 3px solid $color-dark;
+    padding: 10px;
+    margin: 5px 0;
+}
